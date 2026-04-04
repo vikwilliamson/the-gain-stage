@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Workforce Development - The Gain Stage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Workforce-specific styles */
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 4em 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 1em;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2em;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #ed786a;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #d66658;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #ed786a;
+            color: #ed786a;
+        }
+        
+        .btn-secondary:hover {
+            background: #ed786a;
+            color: white;
+        }
+        
+        .section {
+            padding: 4em 0;
+        }
+        
+        .section-alt {
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 1em;
+            color: #2c3e50;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 3em;
+            color: #666;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3em;
+        }
+        
+        .program-card {
+            background: white;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .program-card h3 {
+            color: #ed786a;
+            margin-bottom: 1em;
+        }
+        
+        .barrier-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2em 0;
+        }
+        
+        .barrier-item {
+            background: rgba(237, 120, 106, 0.1);
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 600;
+            color: #d66658;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2em;
+        }
+        
+        .value-item {
+            text-align: center;
+        }
+        
+        .value-item h4 {
+            color: #ed786a;
+            margin-bottom: 0.5em;
+        }
+        
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2em;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5em;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: 700;
+            color: #ed786a;
+            margin-bottom: 0.5em;
+        }
+        
+        .belonging-section {
+            background: linear-gradient(135deg, #ed786a 0%, #d66658 100%);
+            color: white;
+            text-align: center;
+            padding: 4em 0;
+        }
+        
+        .belonging-title {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+        
+        .belonging-text {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .final-cta {
+            background: #2c3e50;
+            color: white;
+            padding: 4em 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2em;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Building Pathways. Breaking Barriers. Strengthening the Creative Workforce.</h1>
+            <p class="hero-subtitle">A Washington State nonprofit developing the next generation of skilled professionals in live music and the creative industries across the Tri-Cities region.</p>
+            <p class="hero-subtitle">We build real pathways — not just programs.</p>
+            <div class="cta-buttons">
+                <a href="#programs" class="btn">Explore Programs</a>
+                <a href="#partner" class="btn btn-secondary">Partner With Us</a>
+                <a href="#involved" class="btn btn-secondary">Get Involved</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: THE NEED -->
+    <section id="need" class="section">
+        <div class="container">
+            <h2 class="section-title">1. THE NEED</h2>
+            <p class="section-subtitle">The creative economy requires trained people.</p>
+            
+            <p>Concerts, festivals, venues, and cultural events rely on skilled professionals — sound engineers, lighting technicians, stage managers, promoters, marketers, designers, and organizers.</p>
+            
+            <p>Yet for many in our region, those pathways are:</p>
+            
+            <div class="barrier-list">
+                <div class="barrier-item">Invisible</div>
+                <div class="barrier-item">Financially inaccessible</div>
+                <div class="barrier-item">Lacking mentorship</div>
+                <div class="barrier-item">Unclear in next steps</div>
+            </div>
+            
+            <p>When training and infrastructure are missing, opportunity leaves the region. We are building it here.</p>
+        </div>
+    </section>
+
+    <!-- Section 2: WHAT WE DO -->
+    <section id="programs" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">2. WHAT WE DO</h2>
+            <p class="section-subtitle">A Structured Workforce Development Model</p>
+            
+            <p>The Gain Stage combines hands-on training, career navigation, real-world experience, and shared infrastructure to create durable pathways into the creative economy.</p>
+            
+            <div class="program-grid">
+                <article class="program-card">
+                    <h3>Creative Workforce Workshops</h3>
+                    <p>Technical training in:</p>
+                    <ul>
+                        <li>Audio engineering</li>
+                        <li>Lighting & stage operations</li>
+                        <li>Event production & contracts</li>
+                        <li>Marketing & live music promotion</li>
+                        <li>AI tools, digital design & social media</li>
+                        <li>Podcast and media production</li>
+                    </ul>
+                    <p>Workshops are practical, applied, and accessible.</p>
+                </article>
+                
+                <article class="program-card">
+                    <h3>Production Practicum</h3>
+                    <p>Participants work in real production environments — from local venues to regional festivals — building transferable skills and professional standards.</p>
+                </article>
+                
+                <article class="program-card">
+                    <h3>Career Pathways & Advancement Lab</h3>
+                    <p>Training without direction leads nowhere. We provide structured guidance at multiple levels:</p>
+                    <ul>
+                        <li>Cohort-based career labs</li>
+                        <li>One-on-one navigation conversations</li>
+                        <li>Résumé and portfolio development</li>
+                        <li>Interview and gig-prep coaching</li>
+                        <li>Industry networking support</li>
+                        <li>Internship and job placement connections</li>
+                        <li>Alumni reference and recommendation support</li>
+                    </ul>
+                    <p>Every participant leaves with:</p>
+                    <ul>
+                        <li>A documented skills inventory</li>
+                        <li>A professional résumé or portfolio asset</li>
+                        <li>A defined next-step plan toward paid creative work</li>
+                    </ul>
+                </article>
+                
+                <article class="program-card">
+                    <h3>Volunteer-to-Leadership Tracks</h3>
+                    <p>Participation is developmental. Volunteers move through structured levels of responsibility, mentorship, and leadership.</p>
+                    <p>You do not need a résumé to begin. You build it here.</p>
+                </article>
+                
+                <article class="program-card">
+                    <h3>Equipment & Resource Library</h3>
+                    <p>Shared instruments and technical equipment reduce cost barriers and allow participants to build competence before personal investment becomes necessary.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: ACCESS & EQUITY -->
+    <section id="equity" class="section">
+        <div class="container">
+            <h2 class="section-title">3. ACCESS & EQUITY</h2>
+            <p>We intentionally recruit and support:</p>
+            
+            <div class="barrier-list">
+                <div class="barrier-item">Women</div>
+                <div class="barrier-item">LGBTQIA+ participants</div>
+                <div class="barrier-item">BIPOC creatives</div>
+                <div class="barrier-item">Neurodivergent learners</div>
+                <div class="barrier-item">Individuals facing financial barriers</div>
+            </div>
+            
+            <p>Programs are designed to be free or low-cost whenever possible.</p>
+            <p>Creative careers should not depend on privilege of access.</p>
+        </div>
+    </section>
+
+    <!-- Section 4: CREATIVE CONSORTIUM -->
+    <section id="consortium" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">4. CREATIVE CONSORTIUM</h2>
+            <p class="section-subtitle">Strengthening the Entire Creative System</p>
+            
+            <p>Beyond direct training, The Gain Stage is developing a Creative Consortium — a collaborative network reducing administrative and financial barriers for local creatives and small arts organizations.</p>
+            
+            <p>Through pooled infrastructure and shared services, the Consortium supports:</p>
+            
+            <div class="program-grid">
+                <article class="program-card">
+                    <h3>Shared equipment and rehearsal access</h3>
+                </article>
+                <article class="program-card">
+                    <h3>Administrative resources</h3>
+                    <p>(compliance, HR, bookkeeping)</p>
+                </article>
+                <article class="program-card">
+                    <h3>Professional development</h3>
+                </article>
+                <article class="program-card">
+                    <h3>Collective purchasing power</h3>
+                </article>
+                <article class="program-card">
+                    <h3>Regional advocacy</h3>
+                </article>
+            </div>
+            
+            <p>Workforce development and ecosystem strength go hand in hand.</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Culture, Accountability & Leadership -->
+    <section id="culture" class="section">
+        <div class="container">
+            <h2 class="section-title">5. Culture, Accountability & Leadership</h2>
+            <p>The Gain Stage is built on a culture of collaboration, shared accountability, and continuous growth.</p>
+            
+            <p>We operate with clear governance, financial transparency, and defined leadership roles — while fostering an environment where feedback, reflection, and measurable improvement are part of how we work.</p>
+            
+            <p>Our values shape both our programs and our internal operations:</p>
+            
+            <div class="value-grid">
+                <div class="value-item">
+                    <h4>Collaboration</h4>
+                    <p>We build across disciplines, sectors, and lived experience.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Shared Accountability</h4>
+                    <p>Participants and leaders uphold clear standards and follow through on commitments.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Transparency</h4>
+                    <p>Decisions and information are communicated clearly.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Continuous Learning</h4>
+                    <p>We evaluate and strengthen our programs over time to ensure iterative, community-responsive program design.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Equity in Practice</h4>
+                    <p>Inclusion informs recruitment, leadership pathways, and program design.</p>
+                </div>
+            </div>
+            
+            <p>We believe strong creative ecosystems require both imagination and structure.</p>
+            <p>Our governance blends:</p>
+            
+            <div class="value-grid">
+                <div class="value-item">
+                    <h4>Structured accountability</h4>
+                </div>
+                <div class="value-item">
+                    <h4>Collaborative decision-making</h4>
+                </div>
+                <div class="value-item">
+                    <h4>Iterative, community-responsive program design</h4>
+                </div>
+            </div>
+            
+            <p>We believe creative ecosystems thrive when leadership is transparent, participatory, and adaptive.</p>
+        </div>
+    </section>
+
+    <!-- Section 6: IMPACT GOALS -->
+    <section id="impact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">6. IMPACT GOALS</h2>
+            <p class="section-subtitle">Initial 12–24 month objectives:</p>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">40–60</div>
+                    <p>participants trained annually</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">✓</div>
+                    <p>Career lab cohorts launched</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">✓</div>
+                    <p>Internship and placement partnerships established</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">✓</div>
+                    <p>Equipment library expanded</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">✓</div>
+                    <p>Consortium advisory council formed</p>
+                </div>
+            </div>
+            
+            <p>Long-term: A resilient, inclusive creative workforce rooted in the Tri-Cities region.</p>
+        </div>
+    </section>
+
+    <!-- Section 7: BELONGING -->
+    <section class="belonging-section">
+        <div class="container">
+            <h2 class="belonging-title">7. BELONGING</h2>
+            <p class="belonging-text">The stage is bigger than the spotlight.</p>
+            
+            <div class="value-grid" style="color: white;">
+                <div class="value-item">
+                    <p>If you're curious about live music.</p>
+                </div>
+                <div class="value-item">
+                    <p>If you want to build something behind the scenes.</p>
+                </div>
+                <div class="value-item">
+                    <p>If you've never been told there's a place for you here.</p>
+                </div>
+            </div>
+            
+            <p class="belonging-text">There is.</p>
+            <p class="belonging-text">You do not need to be the performer.</p>
+            <p class="belonging-text">You just need a starting point.</p>
+        </div>
+    </section>
+
+    <!-- Section 8: CALL TO ACTION -->
+    <section id="involved" class="final-cta">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">8. CALL TO ACTION</h2>
+            <div class="cta-buttons">
+                <a href="#programs" class="btn">Join a Cohort</a>
+                <a href="#partner" class="btn btn-secondary">Volunteer</a>
+                <a href="#partner" class="btn btn-secondary">Partner With Us</a>
+                <a href="#partner" class="btn btn-secondary">Donate</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
