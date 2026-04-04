@@ -2023,6 +2023,95 @@ input, select, textarea {
 		}
 	}
 
+/* Industry Page Custom Styles - Higher Specificity */
+
+body.industry {
+	text-align: center !important;
+}
+
+body.industry #main #content {
+	text-align: center !important;
+}
+
+body.industry #main #content .box.post {
+	text-align: center !important;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+body.industry #main #content .box.post * {
+	text-align: center !important;
+}
+
+body.industry #main #content .box.post h2,
+body.industry #main #content .box.post h3,
+body.industry #main #content .box.post h4,
+body.industry #main #content .box.post p,
+body.industry #main #content .box.post ul {
+	text-align: center !important;
+}
+
+body.industry #main #content .box.post ul {
+	list-style: none !important;
+	padding-left: 0 !important;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+body.industry #main #content .box.post ul li {
+	text-align: center;
+	margin: 0.5em 0;
+}
+
+body.industry #main #content .box.post .row {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 2em;
+	margin: 2em 0;
+}
+
+body.industry #main #content .box.post .row .col-6,
+body.industry #main #content .box.post .row .col-12 {
+	text-align: center;
+}
+
+/* Call to Action button grid layout */
+body.industry #main #content .box.post header + ul.actions {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5em;
+	margin-top: 3em;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body.industry #main #content .box.post ul.actions li {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+body.industry #main #content .box.post ul.actions {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5em;
+	margin-top: 2em;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Tablet and Desktop: 2 columns for Call to Action buttons */
+@media screen and (min-width: 768px) {
+	body.industry #main #content .box.post ul.actions {
+		grid-template-columns: 1fr 1fr;
+		max-width: 800px;
+	}
+}
+
 	.box.excerpt .date {
 		background: #878787;
 		color: #fff;
