@@ -1905,9 +1905,123 @@ input, select, textarea {
 			border: none;
 		}
 
-		.contact-info ul.icons li:before {
-			display: none;
+		.approach-container {
+		margin-top: 2em;
+		position: relative;
+	}
+
+	.approach-step {
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 3em;
+		position: relative;
+		background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+		border-radius: 12px;
+		padding: 2em;
+		border: 2px solid #e5e5e5;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.approach-step:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+		border-color: #ed786a;
+	}
+
+	.step-number {
+		flex: 0 0 80px;
+		height: 80px;
+		background: linear-gradient(135deg, #ed786a 0%, #f09080 100%);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2em;
+		font-weight: bold;
+		margin-right: 2em;
+		box-shadow: 0 4px 12px rgba(237, 120, 106, 0.3);
+		position: relative;
+		z-index: 2;
+	}
+
+	.step-content {
+		flex: 1;
+		position: relative;
+		z-index: 1;
+	}
+
+	.step-content h4 {
+		color: #333;
+		font-size: 1.4em;
+		font-weight: 600;
+		margin: 0 0 1em 0;
+		text-transform: none;
+		letter-spacing: normal;
+	}
+
+	.step-content p {
+		color: #555;
+		line-height: 1.6;
+		margin-bottom: 1em;
+	}
+
+	.step-content strong {
+		color: #ed786a;
+		font-weight: 600;
+	}
+
+	.step-content em {
+		color: #777;
+		font-style: italic;
+	}
+
+	.step-content ul {
+		margin: 1em 0;
+		padding-left: 1.5em;
+	}
+
+	.step-content ul li {
+		color: #666;
+		margin-bottom: 0.5em;
+		padding-left: 0.5em;
+	}
+
+	/* Connecting line between steps */
+	.approach-step:not(:last-child)::after {
+		content: '';
+		position: absolute;
+		left: 40px;
+		top: 100%;
+		width: 2px;
+		height: 3em;
+		background: linear-gradient(to bottom, #ed786a, transparent);
+		z-index: 0;
+	}
+
+	/* Responsive design */
+	@media screen and (max-width: 768px) {
+		.approach-step {
+			flex-direction: column;
+			text-align: center;
+			padding: 1.5em;
 		}
+
+		.step-number {
+			margin-right: 0;
+			margin-bottom: 1em;
+			align-self: center;
+		}
+
+		.approach-step:not(:last-child)::after {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.step-content h4 {
+			font-size: 1.2em;
+		}
+	}
 
 	.box.excerpt .date {
 		background: #878787;
