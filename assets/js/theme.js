@@ -1,0 +1,16 @@
+(function () {
+	var btn = document.getElementById('theme-toggle');
+	if (!btn) return;
+
+	btn.addEventListener('click', function () {
+		var root = document.documentElement;
+		var isLight = root.getAttribute('data-theme') === 'light';
+		if (isLight) {
+			root.removeAttribute('data-theme');
+			localStorage.setItem('theme', 'dark');
+		} else {
+			root.setAttribute('data-theme', 'light');
+			localStorage.setItem('theme', 'light');
+		}
+	});
+}());

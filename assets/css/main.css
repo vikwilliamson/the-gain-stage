@@ -3294,7 +3294,7 @@ body.industry #main #content .box.post ul.actions {
 	/* Collapse the site header to nav-only height on the workforce page */
 	body.workforce #header > .container {
 		padding: 0;
-		min-height: 9em;
+		min-height: 14em;
 		border-bottom: none;
 		box-shadow: none;
 	}
@@ -3331,4 +3331,278 @@ body.industry #main #content .box.post ul.actions {
 			width: 100%;
 			max-width: 300px;
 		}
+	}
+
+/* ==========================================================================
+   Theme toggle button
+   ========================================================================== */
+
+	.theme-toggle {
+		margin-left: auto;
+		background: none;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #d0d0d0;
+		cursor: pointer;
+		width: 2em;
+		height: 2em;
+		border-radius: 50%;
+		font-size: 1em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: border-color 0.2s, color 0.2s;
+		flex-shrink: 0;
+		padding: 0;
+	}
+
+	.theme-toggle:hover {
+		border-color: #ed786a;
+		color: #ed786a;
+	}
+
+	.theme-toggle::before {
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		content: '\f185';
+		font-size: 0.85em;
+	}
+
+	[data-theme="light"] .theme-toggle::before {
+		content: '\f186';
+	}
+
+	[data-theme="light"] .theme-toggle {
+		border-color: #666666;
+		color: #111111;
+		background: rgba(0, 0, 0, 0.06);
+	}
+
+	[data-theme="light"] .theme-toggle:hover {
+		border-color: #ed786a;
+		color: #ed786a;
+	}
+
+/* ==========================================================================
+   Light theme overrides  (dark is the default)
+   ========================================================================== */
+
+	[data-theme="light"] body {
+		background: #f0f0f0;
+		color: #777777;
+	}
+
+	[data-theme="light"] h1,
+	[data-theme="light"] h2,
+	[data-theme="light"] h3,
+	[data-theme="light"] h4,
+	[data-theme="light"] h5,
+	[data-theme="light"] h6 {
+		color: #888888;
+	}
+
+	[data-theme="light"] strong,
+	[data-theme="light"] b {
+		color: #666666;
+	}
+
+	[data-theme="light"] a {
+		color: #666666;
+		border-bottom-color: #dddddd;
+	}
+
+	[data-theme="light"] hr {
+		border-top-color: #dddddd;
+	}
+
+	[data-theme="light"] blockquote {
+		border-left-color: #dddddd;
+	}
+
+	/* List chips */
+	[data-theme="light"] .box.post ul:not(.actions) li {
+		background: #ebebeb;
+		color: #666666;
+	}
+
+	/* Contact info chips */
+	[data-theme="light"] .contact-info ul.icons li {
+		background: #e8e8e8;
+		color: #666666;
+	}
+
+	/* Forms */
+	[data-theme="light"] form input[type="text"]:focus,
+	[data-theme="light"] form input[type="email"]:focus,
+	[data-theme="light"] form input[type="password"]:focus,
+	[data-theme="light"] form select:focus,
+	[data-theme="light"] form textarea:focus,
+	[data-theme="light"] #footer form input[type="text"]:focus,
+	[data-theme="light"] #footer form input[type="email"]:focus,
+	[data-theme="light"] #footer form input[type="password"]:focus,
+	[data-theme="light"] #footer form select:focus,
+	[data-theme="light"] #footer form textarea:focus {
+		background: #ffffff;
+	}
+
+	/* Approach steps */
+	[data-theme="light"] .approach-step {
+		background: linear-gradient(#f8f8f8, #ffffff);
+		border-color: #e5e5e5;
+	}
+
+	[data-theme="light"] .step-content h4 {
+		color: #333333;
+	}
+
+	[data-theme="light"] .step-content p {
+		color: #555555;
+	}
+
+	[data-theme="light"] .step-content em {
+		color: #777777;
+	}
+
+	[data-theme="light"] .step-content ul li {
+		color: #666666;
+	}
+
+	/* Header */
+	[data-theme="light"] #header {
+		background: #ffffff;
+	}
+
+	[data-theme="light"] #header > .container {
+		border-bottom-color: #e5e5e5;
+		box-shadow: inset 0px -8px 0px 0px #ffffff, inset 0px -10px 0px 0px #e5e5e5;
+	}
+
+	[data-theme="light"] #header p {
+		color: #888888;
+	}
+
+	/* Preserve brand coral on header logo */
+	[data-theme="light"] #header h1 {
+		color: #ed786a;
+	}
+
+	/* Dropotron */
+	[data-theme="light"] .dropotron {
+		border-color: #e5e5e5;
+		background: #ffffff;
+		background: rgba(255, 255, 255, 0.98);
+		color: #666666;
+	}
+
+	[data-theme="light"] .dropotron span,
+	[data-theme="light"] .dropotron a {
+		border-top-color: #f0f0f0;
+		color: #666666;
+	}
+
+	/* Features */
+	[data-theme="light"] #features {
+		background: #ffffff;
+	}
+
+	/* Banner */
+	[data-theme="light"] #banner {
+		border-top-color: #e5e5e5;
+		border-bottom-color: #e5e5e5;
+		box-shadow: inset 0px -8px 0px 0px #f0f0f0, inset 0px 8px 0px 0px #f0f0f0;
+	}
+
+	/* Main */
+	[data-theme="light"] #main {
+		background: #ffffff;
+	}
+
+	/* Content / sidebar */
+	[data-theme="light"] #content > section,
+	[data-theme="light"] #content > article {
+		border-top-color: #e5e5e5;
+		box-shadow: inset 0px 8px 0px 0px #ffffff, inset 0px 10px 0px 0px #e5e5e5;
+	}
+
+	[data-theme="light"] #sidebar > section,
+	[data-theme="light"] #sidebar > article {
+		border-top-color: #e5e5e5;
+		box-shadow: inset 0px 8px 0px 0px #ffffff, inset 0px 10px 0px 0px #e5e5e5;
+	}
+
+	/* Footer */
+	[data-theme="light"] #footer {
+		border-top-color: #e5e5e5;
+		background: #f0f0f0;
+	}
+
+	[data-theme="light"] #copyright {
+		border-top-color: #e5e5e5;
+	}
+
+	/* TitleBar (mobile) */
+	[data-theme="light"] #titleBar .toggle:before {
+		background: rgba(232, 232, 232, 0.9) url('../images/bg.jpg') fixed center center / cover;
+		color: #aaaaaa;
+	}
+
+	/* Divided list */
+	[data-theme="light"] ul.divided li {
+		border-top-color: #e5e5e5;
+	}
+
+	/* NavPanel (mobile) */
+	[data-theme="light"] #navPanel .link {
+		color: #666666;
+	}
+
+	/* Workforce page — themed sections */
+	[data-theme="light"] .section-alt {
+		background: #ebebeb;
+	}
+
+	[data-theme="light"] .section-title {
+		color: #333333;
+	}
+
+	[data-theme="light"] .section-subtitle {
+		color: #666666;
+	}
+
+	[data-theme="light"] .program-card {
+		background: #ffffff;
+		border-color: #e5e5e5;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+	}
+
+	[data-theme="light"] .stat-item {
+		background: #ffffff;
+		border-color: #e5e5e5;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+	}
+
+	[data-theme="light"] .barrier-item {
+		color: #555555;
+	}
+
+	/* Preserve coral on workforce card headings and value items */
+	[data-theme="light"] .program-card h3,
+	[data-theme="light"] .value-item h4 {
+		color: #ed786a;
+	}
+
+	/* Preserve white text on always-dark branded sections */
+	[data-theme="light"] .hero-section h1,
+	[data-theme="light"] .hero-section h2,
+	[data-theme="light"] .hero-section h3,
+	[data-theme="light"] .hero-section strong,
+	[data-theme="light"] .belonging-section h1,
+	[data-theme="light"] .belonging-section h2,
+	[data-theme="light"] .belonging-section h3,
+	[data-theme="light"] .belonging-section strong,
+	[data-theme="light"] .final-cta h1,
+	[data-theme="light"] .final-cta h2,
+	[data-theme="light"] .final-cta h3,
+	[data-theme="light"] .final-cta .section-title,
+	[data-theme="light"] .final-cta strong {
+		color: #ffffff;
 	}
