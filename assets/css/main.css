@@ -84,7 +84,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f0f0f0;
+		background: #111111;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -101,7 +101,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
-		color: #777;
+		color: #d0d0d0;
 		line-height: 1.65em;
 		font-size: 15pt;
 	}
@@ -109,7 +109,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		text-transform: uppercase;
-		color: #888;
+		color: #ffffff;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -137,9 +137,9 @@ input, select, textarea {
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-		color: #666;
+		color: #d0d0d0;
 		text-decoration: none;
-		border-bottom: solid 1px #ddd;
+		border-bottom: solid 1px #444444;
 	}
 
 		a strong {
@@ -160,7 +160,7 @@ input, select, textarea {
 
 	strong, b {
 		font-weight: 600;
-		color: #666;
+		color: #f0f0f0;
 	}
 
 	em, i {
@@ -181,11 +181,11 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #ddd;
+		border-top: solid 1px #2c2c2c;
 	}
 
 	blockquote {
-		border-left: solid 0.5em #ddd;
+		border-left: solid 0.5em #2c2c2c;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
@@ -1605,7 +1605,7 @@ input, select, textarea {
 	}
 
 		ul.divided li {
-			border-top: solid 2px #e5e5e5;
+			border-top: solid 2px #2c2c2c;
 			padding-left: 0;
 			margin: 2.5em 0 0 0;
 			padding: 2.5em 0 0 0;
@@ -1692,7 +1692,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			background: #f0f0f0;
+			background: #1e1e1e;
 		}
 
 	form textarea {
@@ -1868,12 +1868,18 @@ input, select, textarea {
 			gap: 0.5em;
 		}
 
-		.box.post ul li {
+		.box.post ul:not(.actions) li {
 			margin: 0;
 			padding: 0.5em 1em;
-			background: #f8f8f8;
+			background: #1e1e1e;
 			border-radius: 4px;
 			flex: 0 0 auto;
+			color: #d0d0d0;
+		}
+
+		.box.post ul.actions li {
+			background: transparent;
+			padding: 0;
 		}
 
 	.contact-info {
@@ -1897,12 +1903,15 @@ input, select, textarea {
 		}
 
 		.contact-info ul.icons li {
-			display: inline-block;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5em;
 			margin: 0.5em;
 			padding: 0.5em 1em;
-			background: #f8f8f8;
+			background: #1e1e1e;
 			border-radius: 4px;
 			border: none;
+			color: #d0d0d0;
 		}
 
 		.approach-container {
@@ -1915,10 +1924,10 @@ input, select, textarea {
 		align-items: flex-start;
 		margin-bottom: 3em;
 		position: relative;
-		background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+		background: #1a1a1a;
 		border-radius: 12px;
 		padding: 2em;
-		border: 2px solid #e5e5e5;
+		border: 2px solid #2c2c2c;
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 	}
 
@@ -1952,7 +1961,7 @@ input, select, textarea {
 	}
 
 	.step-content h4 {
-		color: #333;
+		color: #ffffff;
 		font-size: 1.4em;
 		font-weight: 600;
 		margin: 0 0 1em 0;
@@ -1961,7 +1970,7 @@ input, select, textarea {
 	}
 
 	.step-content p {
-		color: #555;
+		color: #d0d0d0;
 		line-height: 1.6;
 		margin-bottom: 1em;
 	}
@@ -1972,7 +1981,7 @@ input, select, textarea {
 	}
 
 	.step-content em {
-		color: #777;
+		color: #999999;
 		font-style: italic;
 	}
 
@@ -1982,7 +1991,7 @@ input, select, textarea {
 	}
 
 	.step-content ul li {
-		color: #666;
+		color: #d0d0d0;
 		margin-bottom: 0.5em;
 		padding-left: 0.5em;
 	}
@@ -2174,7 +2183,7 @@ body.industry #main #content .box.post ul.actions {
 
 	#header {
 		position: relative;
-		background: #fff;
+		background: #000000;
 		text-align: center;
 	}
 
@@ -2186,8 +2195,8 @@ body.industry #main #content .box.post ul.actions {
 
 		#header > .container {
 			padding: 14em 0 7em 0;
-			border-bottom: solid 2px #e5e5e5;
-			box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
+			border-bottom: solid 2px #2c2c2c;
+			box-shadow: inset 0px -8px 0px 0px #000000, inset 0px -10px 0px 0px #2c2c2c;
 		}
 
 		#header h1 {
@@ -2206,7 +2215,7 @@ body.industry #main #content .box.post ul.actions {
 		#header p {
 			text-transform: uppercase;
 			font-weight: 400;
-			color: #888;
+			color: #999999;
 			margin: 2.5em 0 0 0;
 			font-size: 0.85em;
 			letter-spacing: 3px;
@@ -2321,11 +2330,11 @@ body.industry #main #content .box.post ul.actions {
 
 	.dropotron {
 		text-align: left;
-		border: solid 1px #e5e5e5;
+		border: solid 1px #2c2c2c;
 		border-radius: 4px;
-		background: #fff;
-		background: rgba(255, 255, 255, 0.965);
-		box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+		background: #1a1a1a;
+		background: rgba(26, 26, 26, 0.98);
+		box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
 		padding: 0.75em 0 0.5em 0;
 		min-width: 12em;
 		margin-top: calc(-0.5em + 1px);
@@ -2364,8 +2373,9 @@ body.industry #main #content .box.post ul.actions {
 			display: block;
 			padding: 0.3em 1em 0.3em 1em;
 			border: 0;
-			border-top: solid 1px #f0f0f0;
+			border-top: solid 1px #2c2c2c;
 			outline: 0;
+			color: #d0d0d0;
 		}
 
 		.dropotron li {
@@ -2391,7 +2401,7 @@ body.industry #main #content .box.post ul.actions {
 	#features {
 		position: relative;
 		overflow: hidden;
-		background: #fff;
+		background: #111111;
 		text-align: center;
 		padding: 6em 0;
 	}
@@ -2415,13 +2425,11 @@ body.industry #main #content .box.post ul.actions {
 	#banner {
 		position: relative;
 		overflow: hidden;
-		background: #fff;
 		color: #fff;
 		text-align: center;
-		border-top: solid 2px #e5e5e5;
-		border-bottom: solid 2px #e5e5e5;
-		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
-		position: relative;
+		border-top: solid 2px #2c2c2c;
+		border-bottom: solid 2px #2c2c2c;
+		box-shadow: inset 0px -8px 0px 0px #111111, inset 0px 8px 0px 0px #111111;
 		text-transform: uppercase;
 		background: url("../../images/banner.jpg");
 		background-size: cover;
@@ -2480,7 +2488,7 @@ body.industry #main #content .box.post ul.actions {
 	#main {
 		position: relative;
 		overflow: hidden;
-		background: #fff;
+		background: #111111;
 		padding: 6em 0;
 	}
 
@@ -2499,8 +2507,8 @@ body.industry #main #content .box.post ul.actions {
 
 	#content > section,
 	#content > article {
-		border-top: solid 2px #e5e5e5;
-		box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
+		border-top: solid 2px #2c2c2c;
+		box-shadow: inset 0px 8px 0px 0px #111111, inset 0px 10px 0px 0px #2c2c2c;
 		margin: 5em 0 0 0;
 		padding: 5em 0 0 0;
 		text-align: center;
@@ -2519,8 +2527,8 @@ body.industry #main #content .box.post ul.actions {
 
 	#sidebar > section,
 	#sidebar > article {
-		border-top: solid 2px #e5e5e5;
-		box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
+		border-top: solid 2px #2c2c2c;
+		box-shadow: inset 0px 8px 0px 0px #111111, inset 0px 10px 0px 0px #2c2c2c;
 		margin: 5em 0 0 0;
 		padding: 5em 0 0 0;
 	}
@@ -2538,8 +2546,8 @@ body.industry #main #content .box.post ul.actions {
 	#footer {
 		position: relative;
 		overflow: hidden;
-		border-top: solid 2px #e5e5e5;
-		background: #f0f0f0;
+		border-top: solid 2px #2c2c2c;
+		background: #0d0d0d;
 		padding: 6em 0 8em 0;
 	}
 
@@ -2562,7 +2570,7 @@ body.industry #main #content .box.post ul.actions {
 			#footer form input[type="password"]:focus,
 			#footer form select:focus,
 			#footer form textarea:focus {
-				background: #fff;
+				background: #1e1e1e;
 			}
 
 		#footer h2 {
@@ -2572,7 +2580,7 @@ body.industry #main #content .box.post ul.actions {
 /* Copyright */
 
 	#copyright {
-		border-top: solid 2px #e5e5e5;
+		border-top: solid 2px #2c2c2c;
 		text-align: center;
 		margin-top: 6em;
 		padding-top: 4em;
@@ -2765,7 +2773,7 @@ body.industry #main #content .box.post ul.actions {
 						display: block;
 						width: 60px;
 						height: 40px;
-						background: rgba(232, 232, 232, 0.9);
+						background: rgba(20, 20, 20, 0.9);
 						border-radius: 4px;
 						position: absolute;
 						left: 5px;
@@ -2774,7 +2782,7 @@ body.industry #main #content .box.post ul.actions {
 						text-align: center;
 						line-height: 40px;
 						font-size: 18px;
-						color: #aaa;
+						color: #d0d0d0;
 					}
 
 					#titleBar .toggle:active:before {

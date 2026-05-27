@@ -74,21 +74,21 @@
         }
         
         .section-alt {
-            background: #f8f9fa;
+            background: #1a1a1a;
         }
-        
+
         .section-title {
             font-size: 2em;
             text-align: center;
             margin-bottom: 1em;
-            color: #2c3e50;
+            color: #ffffff;
         }
-        
+
         .section-subtitle {
             text-align: center;
             font-size: 1.1em;
             margin-bottom: 3em;
-            color: #666;
+            color: #999999;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -102,11 +102,12 @@
         }
         
         .program-card {
-            background: white;
+            background: #1a1a1a;
             padding: 2em;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease;
+            border: 1px solid #2c2c2c;
         }
         
         .program-card:hover {
@@ -126,12 +127,12 @@
         }
         
         .barrier-item {
-            background: rgba(237, 120, 106, 0.1);
+            background: rgba(237, 120, 106, 0.15);
             padding: 1rem;
             border-radius: 4px;
             text-align: center;
             font-weight: 600;
-            color: #d66658;
+            color: #d0d0d0;
         }
         
         .value-grid {
@@ -160,9 +161,10 @@
         .stat-item {
             text-align: center;
             padding: 1.5em;
-            background: white;
+            background: #1a1a1a;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            border: 1px solid #2c2c2c;
         }
         
         .stat-number {
@@ -181,15 +183,50 @@
         
         .belonging-title {
             font-size: 2.5em;
-            margin-bottom: 1em;
+            margin-bottom: 0.25em;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
-        
-        .belonging-text {
-            font-size: 1.2em;
-            margin-bottom: 2em;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+
+        .belonging-tagline {
+            font-size: 1em;
+            opacity: 0.7;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 2.5em;
+        }
+
+        .belonging-prompts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 560px;
+            margin: 0 auto 2em;
+            gap: 0;
+        }
+
+        .belonging-prompt {
+            font-size: 1.25em;
+            font-style: italic;
+            padding: 0.65em 1.25em;
+            border-left: 3px solid rgba(255, 255, 255, 0.45);
+            text-align: left;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .belonging-answer {
+            font-size: 3.5em;
+            font-weight: 800;
+            margin: 0.4em 0 0.75em;
+            letter-spacing: 0.04em;
+        }
+
+        .belonging-close {
+            font-size: 1.1em;
+            opacity: 0.8;
+            font-style: italic;
+            line-height: 1.9;
         }
         
         .final-cta {
@@ -239,11 +276,6 @@
         .final-cta .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.15);
             color: #fff;
-        }
-
-        /* WCAG fix: #d66658 on rgba(237,120,106,0.1) ≈ 3.26:1, fails AA */
-        .barrier-item {
-            color: #7a2e24;
         }
 
         /* WCAG fix: white on #ed786a = 2.64:1, fails AA — darken the gradient */
@@ -517,31 +549,28 @@
     <!-- Section 7: BELONGING -->
     <section class="belonging-section">
         <div class="container">
-            <h2 class="belonging-title">7. BELONGING</h2>
-            <p class="belonging-text">The stage is bigger than the spotlight.</p>
-            
-            <div class="value-grid" style="color: white;">
-                <div class="value-item">
-                    <p>If you're curious about live music.</p>
-                </div>
-                <div class="value-item">
-                    <p>If you want to build something behind the scenes.</p>
-                </div>
-                <div class="value-item">
-                    <p>If you've never been told there's a place for you here.</p>
-                </div>
+            <h2 class="belonging-title">Belonging</h2>
+            <p class="belonging-tagline">The stage is bigger than the spotlight.</p>
+
+            <div class="belonging-prompts">
+                <p class="belonging-prompt">If you're curious about live music.</p>
+                <p class="belonging-prompt">If you want to build something behind the scenes.</p>
+                <p class="belonging-prompt">If you've never been told there's a place for you here.</p>
             </div>
-            
-            <p class="belonging-text">There is.</p>
-            <p class="belonging-text">You do not need to be the performer.</p>
-            <p class="belonging-text">You just need a starting point.</p>
+
+            <p class="belonging-answer">There is.</p>
+
+            <div class="belonging-close">
+                <p>You do not need to be the performer.</p>
+                <p>You just need a starting point.</p>
+            </div>
         </div>
     </section>
 
     <!-- Section 8: CALL TO ACTION -->
     <section id="involved" class="final-cta">
         <div class="container">
-            <h2 class="section-title" style="color: white;">8. CALL TO ACTION</h2>
+            <h2 class="section-title" style="color: white;">CALL TO ACTION</h2>
             <div class="cta-buttons">
                 <a href="#programs" class="btn">Join a Cohort</a>
                 <a href="mailto:thegainstagetc@gmail.com" class="btn btn-secondary">Volunteer</a>
@@ -561,13 +590,13 @@
 					<p>We're based in the Tri-Cities area of Washington State. Reach out anytime — whether you have a question, a skill to offer, or just want to see what we're about.</p>
 					<div class="contact-info">
 						<ul class="icons">
-							<li class="icon solid fa-home">
+							<li>
 								Richland, WA
 							</li>
-							<li class="icon solid fa-envelope">
+							<li>
 								<a href="mailto:thegainstagetc@gmail.com">thegainstagetc@gmail.com</a>
 							</li>
-							<li class="icon brands fa-facebook-f">
+							<li>
 								<a href="https://www.facebook.com/profile.php?id=61588924860332">Facebook</a>
 							</li>
 						</ul>
