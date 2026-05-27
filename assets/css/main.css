@@ -2221,7 +2221,40 @@ body.industry #main #content .box.post ul.actions {
 		left: 0;
 		width: 100%;
 		cursor: default;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0 2em;
+		box-sizing: border-box;
 	}
+
+		#nav > ul {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			white-space: nowrap;
+		}
+
+		#nav .nav-logo {
+			border: 0;
+			display: flex;
+			align-items: center;
+			flex-shrink: 0;
+		}
+
+		#nav .nav-logo img {
+			width: 104px;
+			height: 104px;
+			border-radius: 50%;
+			object-fit: cover;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+			transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+		}
+
+		#nav .nav-logo img:hover {
+			transform: scale(1.08);
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+		}
 
 		#nav > ul > li {
 			display: inline-block;
