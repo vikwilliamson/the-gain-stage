@@ -3057,3 +3057,278 @@ body.industry #main #content .box.post ul.actions {
 				}
 
 	}
+
+/* ==========================================================================
+   Workforce page
+   ========================================================================== */
+
+	.hero-section {
+		background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+		color: white;
+		padding: 4em 0;
+		text-align: center;
+	}
+
+	.hero-title {
+		font-size: 2.5em;
+		font-weight: 700;
+		margin-bottom: 1em;
+		line-height: 1.2;
+	}
+
+	.hero-subtitle {
+		font-size: 1.2em;
+		margin-bottom: 2em;
+		opacity: 0.9;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2em;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 12px 24px;
+		background: #ed786a;
+		color: white;
+		text-decoration: none;
+		border-radius: 4px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		transition: all 0.3s ease;
+		border: none;
+		cursor: pointer;
+	}
+
+	.btn:hover {
+		background: #d66658;
+		transform: translateY(-2px);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		border: 2px solid #ed786a;
+		color: #ed786a;
+	}
+
+	.btn-secondary:hover {
+		background: #ed786a;
+		color: white;
+	}
+
+	.section {
+		padding: 4em 0;
+	}
+
+	.section-alt {
+		background: #1a1a1a;
+	}
+
+	.section-title {
+		font-size: 2em;
+		text-align: center;
+		margin-bottom: 1em;
+		color: #ffffff;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		font-size: 1.1em;
+		margin-bottom: 3em;
+		color: #999999;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.program-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3em;
+	}
+
+	.program-card {
+		background: #1a1a1a;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+		transition: transform 0.3s ease;
+		border: 1px solid #2c2c2c;
+	}
+
+	.program-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.program-card h3 {
+		color: #ed786a;
+		margin-bottom: 1em;
+	}
+
+	.barrier-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+		margin: 2em 0;
+	}
+
+	.barrier-item {
+		background: rgba(237, 120, 106, 0.15);
+		padding: 1rem;
+		border-radius: 4px;
+		text-align: center;
+		font-weight: 600;
+		color: #d0d0d0;
+	}
+
+	.value-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2em;
+	}
+
+	.value-item {
+		text-align: center;
+	}
+
+	.value-item h4 {
+		color: #ed786a;
+		margin-bottom: 0.5em;
+	}
+
+	.impact-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 2em;
+	}
+
+	.stat-item {
+		text-align: center;
+		padding: 1.5em;
+		background: #1a1a1a;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+		border: 1px solid #2c2c2c;
+	}
+
+	.stat-number {
+		font-size: 2em;
+		font-weight: 700;
+		color: #ed786a;
+		margin-bottom: 0.5em;
+	}
+
+	.belonging-section {
+		background: linear-gradient(135deg, #b5372a 0%, #8f2a1f 100%);
+		color: white;
+		text-align: center;
+		padding: 4em 0;
+	}
+
+	.belonging-title {
+		font-size: 2.5em;
+		margin-bottom: 0.25em;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.belonging-tagline {
+		font-size: 1em;
+		opacity: 0.7;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		margin-bottom: 2.5em;
+	}
+
+	.belonging-prompts {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 560px;
+		margin: 0 auto 2em;
+		gap: 0;
+	}
+
+	.belonging-prompt {
+		font-size: 1.25em;
+		font-style: italic;
+		padding: 0.65em 1.25em;
+		border-left: 3px solid rgba(255, 255, 255, 0.45);
+		text-align: left;
+		margin: 0;
+		line-height: 1.4;
+	}
+
+	.belonging-answer {
+		font-size: 3.5em;
+		font-weight: 800;
+		margin: 0.4em 0 0.75em;
+		letter-spacing: 0.04em;
+	}
+
+	.belonging-close {
+		font-size: 1.1em;
+		opacity: 0.8;
+		font-style: italic;
+		line-height: 1.9;
+	}
+
+	.final-cta {
+		background: #2c3e50;
+		color: white;
+		padding: 4em 0;
+		text-align: center;
+	}
+
+	/* Collapse the site header to nav-only height on the workforce page */
+	body.workforce #header > .container {
+		padding: 0;
+		min-height: 9em;
+		border-bottom: none;
+		box-shadow: none;
+	}
+
+	body.workforce #header h1,
+	body.workforce #header > .container > p {
+		display: none;
+	}
+
+	/* WCAG: #ed786a on #2c3e50 = 3.0:1 fails AA — use white on dark backgrounds */
+	.hero-section .btn-secondary,
+	.final-cta .btn-secondary {
+		border-color: rgba(255, 255, 255, 0.75);
+		color: #fff;
+	}
+
+	.hero-section .btn-secondary:hover,
+	.final-cta .btn-secondary:hover {
+		background: rgba(255, 255, 255, 0.15);
+		color: #fff;
+	}
+
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: 2em;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.btn {
+			width: 100%;
+			max-width: 300px;
+		}
+	}
