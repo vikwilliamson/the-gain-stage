@@ -3291,16 +3291,15 @@ body.industry #main #content .box.post ul.actions {
 		text-align: center;
 	}
 
-	/* Collapse the site header to nav-only height on the workforce page */
-	body.workforce #header > .container {
+
+	/* Compact nav-only header on all interior pages */
+	body:not(.homepage) #header > .container {
 		padding: 0;
-		min-height: 14em;
-		border-bottom: none;
-		box-shadow: none;
+		min-height: 11em;
 	}
 
-	body.workforce #header h1,
-	body.workforce #header > .container > p {
+	body:not(.homepage) #header h1,
+	body:not(.homepage) #header > .container > p {
 		display: none;
 	}
 
