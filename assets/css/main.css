@@ -3174,6 +3174,11 @@ body.industry #main #content .box.post ul.actions {
 		margin-bottom: 1em;
 	}
 
+	.program-card ul {
+		list-style: none;
+		padding-left: 0;
+	}
+
 	.barrier-list {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
