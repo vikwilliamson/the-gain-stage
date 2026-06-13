@@ -2017,6 +2017,9 @@ input, select, textarea {
 		}
 
 		.step-number {
+			flex: none;
+			width: 80px;
+			height: 80px;
 			margin-right: 0;
 			margin-bottom: 1em;
 			align-self: center;
