@@ -47,6 +47,9 @@
 				'<div id="navPanel">' +
 					'<nav>' +
 						$('#nav').navList() +
+						'<div class="nav-panel-toggle-wrap">' +
+							'<button class="theme-toggle theme-toggle-mobile" aria-label="Toggle light/dark theme"></button>' +
+						'</div>' +
 					'</nav>' +
 				'</div>'
 			)
@@ -61,5 +64,18 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
+
+			$('#navPanel .theme-toggle-mobile').on('click', function (e) {
+				e.stopPropagation();
+				var root = document.documentElement;
+				var isLight = root.getAttribute('data-theme') === 'light';
+				if (isLight) {
+					root.removeAttribute('data-theme');
+					localStorage.setItem('theme', 'dark');
+				} else {
+					root.setAttribute('data-theme', 'light');
+					localStorage.setItem('theme', 'light');
+				}
+			});
 
 })(jQuery);

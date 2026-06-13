@@ -2868,6 +2868,23 @@ body.industry #main #content .box.post ul.actions {
 					color: #fff;
 				}
 
+				#navPanel .nav-panel-toggle-wrap {
+					padding: 1em;
+					border-top: solid 1px #3c3c3c;
+					display: flex;
+					align-items: center;
+					gap: 0.75em;
+				}
+
+				#navPanel .nav-panel-toggle-wrap::before {
+					content: 'Theme';
+					color: #aaa;
+					font-size: 0.85em;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					font-weight: 600;
+				}
+
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
@@ -3557,6 +3574,14 @@ body.industry #main #content .box.post ul.actions {
 	/* NavPanel (mobile) */
 	[data-theme="light"] #navPanel .link {
 		color: #666666;
+	}
+
+	[data-theme="light"] #navPanel .nav-panel-toggle-wrap {
+		border-top-color: #555;
+	}
+
+	[data-theme="light"] #navPanel .nav-panel-toggle-wrap::before {
+		color: #bbb;
 	}
 
 	/* Workforce page — themed sections */
